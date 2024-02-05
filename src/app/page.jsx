@@ -1,59 +1,66 @@
-const data = {
-  activeSince: 2019,
-  skills: [],
-  techStacks: {
-    __head: 1,
-    1: {
-      platform: "Desktop",
-      stack: ["C#", ".NET Core", "Powershell"],
-      usingSince: 2019,
-      next: 2,
-    },
-    2: {
-      platform: "Web",
-      stack: ["HTML", "CSS", "ES5", "jQuery"],
-      usingSince: 2020,
-      next: 3,
-    },
-    3: {
-      platform: "Web",
-      stack: ["PostgreSQL", "Express", "React", "Node"],
-      usingSince: 2021,
-      next: 4,
-    },
-    4: {
-      platform: "Web",
-    },
-  },
-  contactInfo: "contact@${firstName}${lastName}.com",
+const React = require("react");
+import Link from "next/link";
+
+const Namecard = () => {
+  return (
+    <div className='bg-lime-400 text-black w-full h-full flex justify-center items-center flex-col'>
+      <h1 className='text-6xl font-bold uppercase tracking-wide'>Evgeniy Pimenov</h1>
+      <h2 className='text-2xl font-bold uppercase tracking-widest'>Full-Stack Developer</h2>
+    </div>
+  );
+};
+
+const Projects = () => {
+  return (
+    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
+      <h1 className='text-4xl font-bold uppercase tracking-widest'>Projects</h1>
+    </div>
+  );
+};
+
+const Contact = () => {
+  return (
+    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
+      <h1 className='text-4xl font-bold uppercase tracking-widest'>Contact</h1>
+    </div>
+  );
+};
+
+const About = () => {
+  return (
+    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
+      <h1 className='text-4xl font-bold uppercase tracking-widest -rotate-90'>About</h1>
+    </div>
+  );
+};
+
+const Github = () => {
+  return (
+    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
+      <h1 className='text-4xl font-bold uppercase tracking-widest rotate-90'>Github</h1>
+    </div>
+  );
 };
 
 export default function Home() {
   return (
-    <div className='w-full h-full p-4'>
-      <div className='py-2'>
-        <h1 className='font-extralight text-6xl'>Evgeniy Pimenov</h1>
-        <h2 className='font-extralight text-2xl'>Veteran software developer, former United States Air Force</h2>
-      </div>
-      <div className='py-2'>
-        <h2 className='font-light text-2xl'>Skills</h2>
-        <ul>
-          <li>Frontend</li>
-          <li>Backend</li>
-          <li>Server/Devops</li>
-          <li>PM</li>
-          <li>Misc</li>
-        </ul>
-      </div>
-      <div className='py-2'>
-        <h2 className='font-light text-2xl'>Projects</h2>
-        <ul>
-          <li>Lost Horizon</li>
-          <li>QA Toolkit</li>
-          <li>Equilibrium</li>
-          <li>Crimson Tide</li>
-          <li>Fahrenheit 451</li>
-        </ul>
+    <div className='w-screen h-screen p-8'>
+      <div className='grid grid-cols-7 grid-rows-5 h-full border-2 border-black'>
+        <div className='border-2 border-black col-span-5 row-span-2'>
+          <Projects />
+        </div>
+        <div className='border-2 border-black col-span-2 row-span-4'>
+          <Github />
+        </div>
+        <div className='border-2 border-black col-span-2 row-span-3'>
+          <About />
+        </div>
+        <div className='border-2 border-black col-span-3 row-span-2'>
+          <Namecard />
+        </div>
+        <div className='border-2 border-black col-span-5'>
+          <Contact />
+        </div>
       </div>
     </div>
   );
