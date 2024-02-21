@@ -2,16 +2,17 @@ import Link from 'next/link';
 import * as lib from '../../lib';
 
 export default function ProjectsDirectory() {
-  // TODO: This looks like it might be a good candidate for threading...
-  const articleNames = lib.getFileNames('src/lib/md/research');
-  const projectNames = lib.getFileNames('src/lib/md/projects');
+  // TODO: This looks like it might be a good candidate for threading if the dir
+  // gets big enough...
+  let articleNames = lib.getFileNames('src/lib/md/research');
+  let projectNames = lib.getFileNames('src/lib/md/projects');
 
   for (let index = 0; index < articleNames.length; index++) {
-    const element = articleNames[index];
+    articleNames[index] = articleNames[index].slice(0, -3);
   }
 
   for (let index = 0; index < projectNames.length; index++) {
-    const element = projectNames[index];
+    projectNames[index] = projectNames[index].slice(0, -3);
   }
 
   return (
@@ -41,11 +42,13 @@ export default function ProjectsDirectory() {
       </div>
       <div>
         <h2 className='text-2xl'>Research</h2>
-        <pre>
+        <ul>
           {articleNames.map(name => (
-            <li key={name}>{name}</li>
+            <li key={name}>
+              <Link href={'/projects/' + name}>{name}</Link>
+            </li>
           ))}
-        </pre>
+        </ul>
       </div>
       <div></div>
     </div>
