@@ -1,10 +1,12 @@
-import { Pane } from '../components/Pane';
+import { Pane } from '../components/Pane'; // @ imports stop working suddenly?
+import NameCard from '../components/NameCard'; // must be exported default for some reason -- figure out why
 // import * as components from '@/components';
 
 // TODO: The page currently naively assumes the user is on desktop with no
 // mobile fallback. Either write js to swap between presenting a mobile and
 // desktop interface or write proper media queries/tailwind breakpoints
 
+// Sample implementation to monitor on user's device (expensive, bad, forces page onto client-side rendering)
 // const desktopOrMobile = () => {
 //   const [deviceType, setDeviceType] = useState("desktop");
 
@@ -22,19 +24,6 @@ import { Pane } from '../components/Pane';
 
 //   return deviceType;
 // };
-
-const Namecard = () => {
-  return (
-    <div className='bg-lime-400 text-black w-full h-full flex justify-center items-center flex-col'>
-      <h1 className='text-6xl font-bold uppercase tracking-wide'>
-        Evgeniy Pimenov
-      </h1>
-      <h2 className='text-2xl font-bold uppercase tracking-widest'>
-        Full-Stack Developer
-      </h2>
-    </div>
-  );
-};
 
 export default function Home() {
   return (
@@ -60,7 +49,7 @@ export default function Home() {
         </Pane>
       </div>
       <div className='border-2 border-black col-span-3 row-span-2'>
-        <Namecard />
+        <NameCard />
       </div>
       <div className='border-2 border-black col-span-5'>
         <Pane whereTo='mailto:contact@evgeniypimenov.com?subject=Contact Request'>
