@@ -1,0 +1,1 @@
+export { getFileNames } from './getFileNames';
