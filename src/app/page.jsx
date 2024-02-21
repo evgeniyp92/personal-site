@@ -1,4 +1,4 @@
-import { Pane } from '@/components/Pane';
+import { Pane } from '../components/Pane';
 // import * as components from '@/components';
 
 // TODO: The page currently naively assumes the user is on desktop with no
