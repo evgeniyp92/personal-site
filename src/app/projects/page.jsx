@@ -11,7 +11,19 @@ const projects = [
 export default function ProjectsDirectory() {
   return (
     <div>
-      <h1 className='text-6xl'>Work</h1>
+      <warning className='font-bold text-4xl'>
+        This page is under construction. Why not check out my{' '}
+        <span>
+          <Link
+            href='https://github.com/evgeniyp92'
+            target='_blank'
+            className='underline'>
+            Github
+          </Link>
+        </span>{' '}
+        instead?
+      </warning>
+      <h1 className='text-3xl'>Work</h1>
       <div>
         <h2 className='text-2xl'>Projects</h2>
         <ul>
@@ -24,6 +36,7 @@ export default function ProjectsDirectory() {
       </div>
       <div>
         <h2 className='text-2xl'>Research</h2>
+        <p>Watch this space</p>
       </div>
     </div>
   );
