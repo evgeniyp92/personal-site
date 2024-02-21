@@ -1,14 +1,19 @@
 import Link from 'next/link';
-
-const projects = [
-  { name: 'Lost Horizon', slug: 'lost-horizon' },
-  { name: 'Equilibrium', slug: 'equilibrium' },
-  { name: 'Crimson Tide', slug: 'crimson-tide' },
-  { name: 'Fahrenheit 451', slug: 'f451' },
-  { name: 'QA Toolkit', slug: 'qa-toolkit' },
-];
+import * as lib from '../../lib';
 
 export default function ProjectsDirectory() {
+  // TODO: This looks like it might be a good candidate for threading...
+  const articleNames = lib.getFileNames('src/lib/md/research');
+  const projectNames = lib.getFileNames('src/lib/md/projects');
+
+  for (let index = 0; index < articleNames.length; index++) {
+    const element = articleNames[index];
+  }
+
+  for (let index = 0; index < projectNames.length; index++) {
+    const element = projectNames[index];
+  }
+
   return (
     <div>
       <warning className='font-bold text-4xl'>
@@ -27,17 +32,22 @@ export default function ProjectsDirectory() {
       <div>
         <h2 className='text-2xl'>Projects</h2>
         <ul>
-          {projects.map(project => (
-            <li key={project.slug}>
-              <Link href={'/projects/' + project.slug}>{project.name}</Link>
+          {projectNames.map(project => (
+            <li key={project}>
+              <Link href={'/projects/' + project}>{project}</Link>
             </li>
           ))}
         </ul>
       </div>
       <div>
         <h2 className='text-2xl'>Research</h2>
-        <p>Watch this space</p>
+        <pre>
+          {articleNames.map(name => (
+            <li key={name}>{name}</li>
+          ))}
+        </pre>
       </div>
+      <div></div>
     </div>
   );
 }
