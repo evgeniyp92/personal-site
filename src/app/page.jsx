@@ -36,42 +36,6 @@ const Namecard = () => {
   );
 };
 
-const Work = () => {
-  return (
-    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
-      <h1 className='text-4xl font-light uppercase tracking-widest'>Work</h1>
-    </div>
-  );
-};
-
-const Contact = () => {
-  return (
-    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
-      <h1 className='text-4xl font-light uppercase tracking-widest'>Connect</h1>
-    </div>
-  );
-};
-
-const About = () => {
-  return (
-    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
-      <h1 className='text-4xl font-light uppercase tracking-widest -rotate-90'>
-        About
-      </h1>
-    </div>
-  );
-};
-
-const Github = () => {
-  return (
-    <div className='text-black w-full h-full flex justify-center items-center flex-col'>
-      <h1 className='text-4xl font-light uppercase tracking-widest rotate-90'>
-        Github
-      </h1>
-    </div>
-  );
-};
-
 export default function Home() {
   return (
     <div className='grid grid-cols-7 grid-rows-5 h-full border-2 border-black'>
