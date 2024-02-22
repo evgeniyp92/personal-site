@@ -1,3 +1,3 @@
 export default function MDXLayout({ children }) {
-  return <div className='bg-red-500'>{children}</div>;
+  return <div className='prose lg:prose-xl'>{children}</div>;
 }
