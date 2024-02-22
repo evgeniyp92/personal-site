@@ -4,6 +4,8 @@
 // This will fix Tailwind not working here
 // TL;DR: This specific file is outside of the default Tailwind config object of what files to pick up and process
 
+// TODO: Consider not pushing too far on this before rebuilding the project and trying to take advantage of Monaco
+
 export function useMDXComponents(components) {
   return {
     h1: ({ children }) => (
