@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import * as lib from '../../lib';
 
+// TODO: figure out a way to do slug-based routing and serving of mdx files
+// because im gonna kms if i have to make n folders each with a layout and page
+
 export default function ProjectsDirectory() {
   // TODO: This looks like it might be a good candidate for threading if the dir
   // gets big enough...
@@ -42,6 +45,10 @@ export default function ProjectsDirectory() {
       </div>
       <div>
         <h2 className='text-2xl'>Research</h2>
+        <Link href='projects/mdx-on-next/'>
+          Implementing MDX on Next 14 with TailwindCSS (This link is actually
+          live!)
+        </Link>
         <ul>
           {articleNames.map(name => (
             <li key={name}>
