@@ -1,6 +1,4 @@
 // get route params
-import Markdown from 'react-markdown';
-
 const markdown = '# Hello world';
 
 export default function ProjectPage({ params }) {
@@ -8,7 +6,7 @@ export default function ProjectPage({ params }) {
     <div>
       ProjectPage
       <h1>Slug: {params.slug}</h1>
-      <Markdown>{markdown}</Markdown>
+      {/* <Markdown>{markdown}</Markdown> */}
     </div>
   );
 }
