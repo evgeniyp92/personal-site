@@ -10,11 +10,19 @@ export function useMDXComponents(components) {
   return {
     h1: ({ children }) => (
       <h1
-        className='font-bold' // this works as Tailwind?
-        style={{ fontSize: '4rem' }}>
+        className='font-bold text-blue-600' // this works as Tailwind?
+        style={{ fontSize: '4em' }}>
         {children}
       </h1>
     ),
+    h2: ({ children }) => (
+      <h2
+        className=''
+        style={{ fontWeight: 700 }}>
+        {children}
+      </h2>
+    ),
+    h3: ({ children }) => <h3 className='h3'>{children}</h3>,
     pre: ({ children }) => <pre className='code'>{children}</pre>, // can use apply directives in globals.css to style components. not great but not awful either. maybe there's something online about how to deconflict tailwind with mdx
     // code: ({ children }) => <code className='code'>{children}</code>,
     ...components,
