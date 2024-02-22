@@ -3,6 +3,7 @@
 
 import remarkGfm from 'remark-gfm';
 import createMDX from '@next/mdx';
+// TODO add rehype-highlight for syntax marking -- https://mdxjs.com/guides/syntax-highlighting/
 
 /** @type {import('next').NextConfig} */
 
