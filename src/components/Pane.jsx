@@ -7,7 +7,7 @@ export function Pane({ children, whereTo, turnLeft, turnRight, newWindow }) {
         <Link
           target={newWindow && '_blank'}
           href={whereTo ?? '/'}
-          className={`text-4xl font-light uppercase tracking-widest${
+          className={`text-4xl lg:text-6xl font-light uppercase tracking-widest${
             turnLeft ? ' -rotate-90' : ''
           } ${turnRight ? 'rotate-90' : ''}`}>
           {children}
