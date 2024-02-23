@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css'></link>
       </head>
       <body className={openSans.className}>
-        <div className='p-8 w-screen h-screen'>{children}</div>
+        <div className='h-screen w-screen p-8'>{children}</div>
       </body>
     </html>
   );
