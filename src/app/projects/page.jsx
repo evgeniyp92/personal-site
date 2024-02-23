@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import * as lib from '../../lib';
+import BlogCard from '../../components/BlogCard';
 
 // TODO: figure out a way to do slug-based routing and serving of mdx files
 // because im gonna kms if i have to make n folders each with a layout and page
@@ -19,8 +20,16 @@ export default function ProjectsDirectory() {
   }
 
   return (
-    <div>
-      <warning className='font-bold text-4xl'>
+    <div className='container mx-auto'>
+      <div className='pb-4'>
+        <h1 className='pb-4 text-6xl font-bold'>Blog</h1>
+        <BlogCard
+          href='projects/article/mdx-on-next'
+          title='Implementing MDX on Next 14 with TailwindCSS'
+          dateString='February 2024'
+        />
+      </div>
+      <warning className='text-4xl font-bold'>
         This page is under construction. Why not check out my{' '}
         <span>
           <Link
@@ -45,7 +54,7 @@ export default function ProjectsDirectory() {
       </div>
       <div>
         <h2 className='text-2xl'>Research</h2>
-        <Link href='projects/mdx-on-next/'>
+        <Link href='projects/article/mdx-on-next/'>
           Implementing MDX on Next 14 with TailwindCSS (This link is actually
           live!)
         </Link>
@@ -57,7 +66,6 @@ export default function ProjectsDirectory() {
           ))}
         </ul>
       </div>
-      <div></div>
     </div>
   );
 }
